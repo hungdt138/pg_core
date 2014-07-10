@@ -1,0 +1,2026 @@
+06/06 15:43:15:065 Queue Monitor started
+06/06 15:43:15:116 Starting process session
+06/06 15:43:24:551 06/06/2014 15:43:24:250
+Memory information:
+	 :: Free memory            : 228 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,535 MB
+	 :: Total free memory      : 98 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 83
+
+Database connection status: 
+	 Number database connection			: 10
+	 Number busy database connection	: 0
+	 Number idle database connection	: 10
+
+06/06/2014 15:43:24:259
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:43:24:563 Close queue connection pool.
+06/06 15:43:24:611 End of process session
+06/06 15:43:34:670 Starting process session
+06/06 15:43:34:695 06/06/2014 15:43:34:685
+Memory information:
+	 :: Free memory            : 186 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,494 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 224
+
+Database connection status: 
+	 Number database connection			: 10
+	 Number busy database connection	: 0
+	 Number idle database connection	: 10
+
+06/06/2014 15:43:34:685
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:43:34:704 Close queue connection pool.
+06/06 15:43:34:717 End of process session
+06/06 15:43:44:726 Starting process session
+06/06 15:43:44:766 06/06/2014 15:43:44:755
+Memory information:
+	 :: Free memory            : 178 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,485 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 230
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:43:44:755
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:43:44:774 Close queue connection pool.
+06/06 15:43:44:787 End of process session
+06/06 15:43:54:797 Starting process session
+06/06 15:43:54:829 06/06/2014 15:43:54:821
+Memory information:
+	 :: Free memory            : 174 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,481 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 230
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:43:54:822
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:43:54:838 Close queue connection pool.
+06/06 15:43:54:850 End of process session
+06/06 15:44:04:861 Starting process session
+06/06 15:44:04:937 06/06/2014 15:44:04:921
+Memory information:
+	 :: Free memory            : 172 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,479 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 230
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:04:921
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:04:948 Close queue connection pool.
+06/06 15:44:04:961 End of process session
+06/06 15:44:14:972 Starting process session
+06/06 15:44:15:000 06/06/2014 15:44:14:992
+Memory information:
+	 :: Free memory            : 170 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,477 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:14:992
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:15:009 Close queue connection pool.
+06/06 15:44:15:023 End of process session
+06/06 15:44:25:034 Starting process session
+06/06 15:44:25:069 06/06/2014 15:44:25:059
+Memory information:
+	 :: Free memory            : 157 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,464 MB
+	 :: Total free memory      : 93 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:25:059
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:25:078 Close queue connection pool.
+06/06 15:44:25:091 End of process session
+06/06 15:44:35:101 Starting process session
+06/06 15:44:35:135 06/06/2014 15:44:35:123
+Memory information:
+	 :: Free memory            : 156 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,463 MB
+	 :: Total free memory      : 93 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:35:123
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:35:144 Close queue connection pool.
+06/06 15:44:35:156 End of process session
+06/06 15:44:45:169 Starting process session
+06/06 15:44:45:202 06/06/2014 15:44:45:193
+Memory information:
+	 :: Free memory            : 153 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,460 MB
+	 :: Total free memory      : 93 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:45:193
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:45:211 Close queue connection pool.
+06/06 15:44:45:223 End of process session
+06/06 15:44:55:232 Starting process session
+06/06 15:44:55:265 06/06/2014 15:44:55:256
+Memory information:
+	 :: Free memory            : 148 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,455 MB
+	 :: Total free memory      : 93 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:44:55:256
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:44:55:274 Close queue connection pool.
+06/06 15:44:55:286 End of process session
+06/06 15:45:05:301 Starting process session
+06/06 15:45:05:332 06/06/2014 15:45:05:324
+Memory information:
+	 :: Free memory            : 146 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,453 MB
+	 :: Total free memory      : 93 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:05:324
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:05:342 Close queue connection pool.
+06/06 15:45:05:354 End of process session
+06/06 15:45:15:364 Starting process session
+06/06 15:45:15:395 06/06/2014 15:45:15:386
+Memory information:
+	 :: Free memory            : 144 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,451 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:15:386
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:15:406 Close queue connection pool.
+06/06 15:45:15:419 End of process session
+06/06 15:45:25:429 Starting process session
+06/06 15:45:25:463 06/06/2014 15:45:25:453
+Memory information:
+	 :: Free memory            : 139 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,446 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:25:454
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:25:472 Close queue connection pool.
+06/06 15:45:25:485 End of process session
+06/06 15:45:35:495 Starting process session
+06/06 15:45:35:533 06/06/2014 15:45:35:516
+Memory information:
+	 :: Free memory            : 137 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,444 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:35:516
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:35:543 Close queue connection pool.
+06/06 15:45:35:557 End of process session
+06/06 15:45:45:567 Starting process session
+06/06 15:45:45:598 06/06/2014 15:45:45:589
+Memory information:
+	 :: Free memory            : 125 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,432 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:45:589
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:45:607 Close queue connection pool.
+06/06 15:45:45:621 End of process session
+06/06 15:45:55:632 Starting process session
+06/06 15:45:55:663 06/06/2014 15:45:55:655
+Memory information:
+	 :: Free memory            : 123 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,430 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:45:55:655
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:45:55:673 Close queue connection pool.
+06/06 15:45:55:688 End of process session
+06/06 15:46:05:697 Starting process session
+06/06 15:46:05:735 06/06/2014 15:46:05:724
+Memory information:
+	 :: Free memory            : 121 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,428 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:05:724
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:05:747 Close queue connection pool.
+06/06 15:46:05:766 End of process session
+06/06 15:46:15:783 Starting process session
+06/06 15:46:15:815 06/06/2014 15:46:15:806
+Memory information:
+	 :: Free memory            : 119 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,426 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:15:806
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:15:826 Close queue connection pool.
+06/06 15:46:15:838 End of process session
+06/06 15:46:25:849 Starting process session
+06/06 15:46:25:879 06/06/2014 15:46:25:871
+Memory information:
+	 :: Free memory            : 116 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,423 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:25:871
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:25:889 Close queue connection pool.
+06/06 15:46:25:904 End of process session
+06/06 15:46:35:915 Starting process session
+06/06 15:46:35:944 06/06/2014 15:46:35:936
+Memory information:
+	 :: Free memory            : 98 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,405 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:35:936
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:35:954 Close queue connection pool.
+06/06 15:46:35:968 End of process session
+06/06 15:46:45:979 Starting process session
+06/06 15:46:46:009 06/06/2014 15:46:46:000
+Memory information:
+	 :: Free memory            : 94 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,401 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:46:001
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:46:018 Close queue connection pool.
+06/06 15:46:46:031 End of process session
+06/06 15:46:56:041 Starting process session
+06/06 15:46:56:072 06/06/2014 15:46:56:063
+Memory information:
+	 :: Free memory            : 92 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,399 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:46:56:063
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:46:56:081 Close queue connection pool.
+06/06 15:46:56:094 End of process session
+06/06 15:47:06:106 Starting process session
+06/06 15:47:06:154 06/06/2014 15:47:06:144
+Memory information:
+	 :: Free memory            : 90 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,397 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:06:144
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:06:164 Close queue connection pool.
+06/06 15:47:06:177 End of process session
+06/06 15:47:16:186 Starting process session
+06/06 15:47:16:216 06/06/2014 15:47:16:207
+Memory information:
+	 :: Free memory            : 88 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,396 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:16:207
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:16:225 Close queue connection pool.
+06/06 15:47:16:239 End of process session
+06/06 15:47:26:250 Starting process session
+06/06 15:47:26:285 06/06/2014 15:47:26:276
+Memory information:
+	 :: Free memory            : 86 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,393 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:26:277
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:26:297 Close queue connection pool.
+06/06 15:47:26:320 End of process session
+06/06 15:47:36:331 Starting process session
+06/06 15:47:36:386 06/06/2014 15:47:36:377
+Memory information:
+	 :: Free memory            : 84 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,391 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:36:377
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:36:397 Close queue connection pool.
+06/06 15:47:36:415 End of process session
+06/06 15:47:46:428 Starting process session
+06/06 15:47:46:461 06/06/2014 15:47:46:452
+Memory information:
+	 :: Free memory            : 82 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,390 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:46:452
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:46:472 Close queue connection pool.
+06/06 15:47:46:486 End of process session
+06/06 15:47:56:498 Starting process session
+06/06 15:47:56:530 06/06/2014 15:47:56:522
+Memory information:
+	 :: Free memory            : 80 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,387 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:47:56:522
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:47:56:540 Close queue connection pool.
+06/06 15:47:56:552 End of process session
+06/06 15:48:06:566 Starting process session
+06/06 15:48:06:599 06/06/2014 15:48:06:591
+Memory information:
+	 :: Free memory            : 78 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,385 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:48:06:591
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:06:609 Close queue connection pool.
+06/06 15:48:06:623 End of process session
+06/06 15:48:16:634 Starting process session
+06/06 15:48:16:667 06/06/2014 15:48:16:658
+Memory information:
+	 :: Free memory            : 76 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,384 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:48:16:658
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:16:677 Close queue connection pool.
+06/06 15:48:16:691 End of process session
+06/06 15:48:26:703 Starting process session
+06/06 15:48:26:736 06/06/2014 15:48:26:726
+Memory information:
+	 :: Free memory            : 74 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,381 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:48:26:727
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:26:746 Close queue connection pool.
+06/06 15:48:26:760 End of process session
+06/06 15:48:36:772 Starting process session
+06/06 15:48:36:803 06/06/2014 15:48:36:795
+Memory information:
+	 :: Free memory            : 72 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,380 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:48:36:795
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:36:813 Close queue connection pool.
+06/06 15:48:36:827 End of process session
+06/06 15:48:46:838 Starting process session
+06/06 15:48:46:869 06/06/2014 15:48:46:860
+Memory information:
+	 :: Free memory            : 70 MB
+	 :: Allocated memory       : 255 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,377 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 4
+	 Number busy database connection	: 0
+	 Number idle database connection	: 4
+
+06/06/2014 15:48:46:861
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:46:882 Close queue connection pool.
+06/06 15:48:46:898 End of process session
+06/06 15:48:56:910 Starting process session
+06/06 15:48:56:944 06/06/2014 15:48:56:933
+Memory information:
+	 :: Free memory            : 307 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,509 MB
+	 :: Total free memory      : 96 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:48:56:933
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:48:56:954 Close queue connection pool.
+06/06 15:48:56:967 End of process session
+06/06 15:49:06:981 Starting process session
+06/06 15:49:07:016 06/06/2014 15:49:07:006
+Memory information:
+	 :: Free memory            : 306 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,507 MB
+	 :: Total free memory      : 96 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:07:006
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:07:027 Close queue connection pool.
+06/06 15:49:07:041 End of process session
+06/06 15:49:17:052 Starting process session
+06/06 15:49:17:085 06/06/2014 15:49:17:076
+Memory information:
+	 :: Free memory            : 304 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,505 MB
+	 :: Total free memory      : 96 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:17:076
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:17:095 Close queue connection pool.
+06/06 15:49:17:109 End of process session
+06/06 15:49:27:122 Starting process session
+06/06 15:49:27:153 06/06/2014 15:49:27:145
+Memory information:
+	 :: Free memory            : 302 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,503 MB
+	 :: Total free memory      : 96 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:27:145
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:27:164 Close queue connection pool.
+06/06 15:49:27:177 End of process session
+06/06 15:49:37:189 Starting process session
+06/06 15:49:37:221 06/06/2014 15:49:37:213
+Memory information:
+	 :: Free memory            : 299 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,500 MB
+	 :: Total free memory      : 96 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:37:213
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:37:231 Close queue connection pool.
+06/06 15:49:37:244 End of process session
+06/06 15:49:47:260 Starting process session
+06/06 15:49:47:290 06/06/2014 15:49:47:281
+Memory information:
+	 :: Free memory            : 296 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,497 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:47:282
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:47:300 Close queue connection pool.
+06/06 15:49:47:315 End of process session
+06/06 15:49:57:326 Starting process session
+06/06 15:49:57:357 06/06/2014 15:49:57:349
+Memory information:
+	 :: Free memory            : 294 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,495 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:49:57:349
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:49:57:367 Close queue connection pool.
+06/06 15:49:57:382 End of process session
+06/06 15:50:07:395 Starting process session
+06/06 15:50:07:427 06/06/2014 15:50:07:419
+Memory information:
+	 :: Free memory            : 291 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,492 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:07:419
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:07:438 Close queue connection pool.
+06/06 15:50:07:452 End of process session
+06/06 15:50:17:463 Starting process session
+06/06 15:50:17:494 06/06/2014 15:50:17:486
+Memory information:
+	 :: Free memory            : 290 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,491 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:17:486
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:17:506 Close queue connection pool.
+06/06 15:50:17:521 End of process session
+06/06 15:50:27:532 Starting process session
+06/06 15:50:27:565 06/06/2014 15:50:27:556
+Memory information:
+	 :: Free memory            : 289 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,490 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:27:556
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:27:575 Close queue connection pool.
+06/06 15:50:27:589 End of process session
+06/06 15:50:37:601 Starting process session
+06/06 15:50:37:632 06/06/2014 15:50:37:624
+Memory information:
+	 :: Free memory            : 286 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,488 MB
+	 :: Total free memory      : 95 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:37:624
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:37:643 Close queue connection pool.
+06/06 15:50:37:657 End of process session
+06/06 15:50:47:667 Starting process session
+06/06 15:50:47:747 06/06/2014 15:50:47:733
+Memory information:
+	 :: Free memory            : 282 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,484 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:47:734
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:47:761 Close queue connection pool.
+06/06 15:50:47:776 End of process session
+06/06 15:50:57:789 Starting process session
+06/06 15:50:57:822 06/06/2014 15:50:57:814
+Memory information:
+	 :: Free memory            : 281 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,482 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:50:57:814
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:50:57:832 Close queue connection pool.
+06/06 15:50:57:846 End of process session
+06/06 15:51:07:858 Starting process session
+06/06 15:51:07:889 06/06/2014 15:51:07:880
+Memory information:
+	 :: Free memory            : 279 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,480 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:51:07:881
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:07:899 Close queue connection pool.
+06/06 15:51:07:913 End of process session
+06/06 15:51:17:923 Starting process session
+06/06 15:51:17:954 06/06/2014 15:51:17:946
+Memory information:
+	 :: Free memory            : 275 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,476 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:51:17:946
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:17:964 Close queue connection pool.
+06/06 15:51:17:979 End of process session
+06/06 15:51:27:990 Starting process session
+06/06 15:51:28:024 06/06/2014 15:51:28:016
+Memory information:
+	 :: Free memory            : 273 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,474 MB
+	 :: Total free memory      : 94 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 4
+	 Number busy database connection	: 0
+	 Number idle database connection	: 4
+
+06/06/2014 15:51:28:016
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:28:034 Close queue connection pool.
+06/06 15:51:28:048 End of process session
+06/06 15:51:38:059 Starting process session
+06/06 15:51:38:089 06/06/2014 15:51:38:081
+Memory information:
+	 :: Free memory            : 250 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,451 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:51:38:081
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:38:100 Close queue connection pool.
+06/06 15:51:38:113 End of process session
+06/06 15:51:48:125 Starting process session
+06/06 15:51:48:155 06/06/2014 15:51:48:147
+Memory information:
+	 :: Free memory            : 247 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,449 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:51:48:147
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:48:166 Close queue connection pool.
+06/06 15:51:48:181 End of process session
+06/06 15:51:58:192 Starting process session
+06/06 15:51:58:225 06/06/2014 15:51:58:217
+Memory information:
+	 :: Free memory            : 245 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,446 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:51:58:217
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:51:58:236 Close queue connection pool.
+06/06 15:51:58:250 End of process session
+06/06 15:52:08:263 Starting process session
+06/06 15:52:08:294 06/06/2014 15:52:08:286
+Memory information:
+	 :: Free memory            : 243 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,444 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:08:286
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:08:304 Close queue connection pool.
+06/06 15:52:08:319 End of process session
+06/06 15:52:18:331 Starting process session
+06/06 15:52:18:361 06/06/2014 15:52:18:353
+Memory information:
+	 :: Free memory            : 241 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,442 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:18:353
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:18:372 Close queue connection pool.
+06/06 15:52:18:386 End of process session
+06/06 15:52:28:397 Starting process session
+06/06 15:52:28:431 06/06/2014 15:52:28:422
+Memory information:
+	 :: Free memory            : 239 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,440 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:28:422
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:28:441 Close queue connection pool.
+06/06 15:52:28:455 End of process session
+06/06 15:52:38:467 Starting process session
+06/06 15:52:38:498 06/06/2014 15:52:38:489
+Memory information:
+	 :: Free memory            : 236 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,438 MB
+	 :: Total free memory      : 92 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:38:489
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:38:509 Close queue connection pool.
+06/06 15:52:38:523 End of process session
+06/06 15:52:48:534 Starting process session
+06/06 15:52:48:565 06/06/2014 15:52:48:557
+Memory information:
+	 :: Free memory            : 234 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,435 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:48:557
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:48:577 Close queue connection pool.
+06/06 15:52:48:591 End of process session
+06/06 15:52:58:604 Starting process session
+06/06 15:52:58:638 06/06/2014 15:52:58:630
+Memory information:
+	 :: Free memory            : 231 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,433 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:52:58:630
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:52:58:648 Close queue connection pool.
+06/06 15:52:58:665 End of process session
+06/06 15:53:08:678 Starting process session
+06/06 15:53:08:709 06/06/2014 15:53:08:700
+Memory information:
+	 :: Free memory            : 229 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,430 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:08:700
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:08:720 Close queue connection pool.
+06/06 15:53:08:734 End of process session
+06/06 15:53:18:745 Starting process session
+06/06 15:53:18:776 06/06/2014 15:53:18:767
+Memory information:
+	 :: Free memory            : 227 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,428 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:18:768
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:18:787 Close queue connection pool.
+06/06 15:53:18:802 End of process session
+06/06 15:53:28:815 Starting process session
+06/06 15:53:28:858 06/06/2014 15:53:28:841
+Memory information:
+	 :: Free memory            : 224 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,425 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:28:841
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:28:869 Close queue connection pool.
+06/06 15:53:28:884 End of process session
+06/06 15:53:38:894 Starting process session
+06/06 15:53:38:926 06/06/2014 15:53:38:917
+Memory information:
+	 :: Free memory            : 222 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,423 MB
+	 :: Total free memory      : 91 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:38:917
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:38:937 Close queue connection pool.
+06/06 15:53:38:952 End of process session
+06/06 15:53:48:966 Starting process session
+06/06 15:53:48:997 06/06/2014 15:53:48:988
+Memory information:
+	 :: Free memory            : 220 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,421 MB
+	 :: Total free memory      : 90 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:48:988
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:49:008 Close queue connection pool.
+06/06 15:53:49:023 End of process session
+06/06 15:53:59:034 Starting process session
+06/06 15:53:59:068 06/06/2014 15:53:59:059
+Memory information:
+	 :: Free memory            : 219 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,420 MB
+	 :: Total free memory      : 90 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:53:59:060
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:53:59:079 Close queue connection pool.
+06/06 15:53:59:095 End of process session
+06/06 15:54:09:107 Starting process session
+06/06 15:54:09:138 06/06/2014 15:54:09:130
+Memory information:
+	 :: Free memory            : 217 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,418 MB
+	 :: Total free memory      : 90 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:09:130
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:09:149 Close queue connection pool.
+06/06 15:54:09:164 End of process session
+06/06 15:54:19:176 Starting process session
+06/06 15:54:19:207 06/06/2014 15:54:19:198
+Memory information:
+	 :: Free memory            : 193 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,394 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:19:199
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:19:218 Close queue connection pool.
+06/06 15:54:19:233 End of process session
+06/06 15:54:29:244 Starting process session
+06/06 15:54:29:282 06/06/2014 15:54:29:274
+Memory information:
+	 :: Free memory            : 193 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,394 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:29:274
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:29:293 Close queue connection pool.
+06/06 15:54:29:309 End of process session
+06/06 15:54:39:321 Starting process session
+06/06 15:54:39:352 06/06/2014 15:54:39:344
+Memory information:
+	 :: Free memory            : 190 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,392 MB
+	 :: Total free memory      : 89 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:39:344
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:39:363 Close queue connection pool.
+06/06 15:54:39:379 End of process session
+06/06 15:54:49:390 Starting process session
+06/06 15:54:49:425 06/06/2014 15:54:49:417
+Memory information:
+	 :: Free memory            : 188 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,390 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:49:417
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:49:438 Close queue connection pool.
+06/06 15:54:49:455 End of process session
+06/06 15:54:59:469 Starting process session
+06/06 15:54:59:504 06/06/2014 15:54:59:496
+Memory information:
+	 :: Free memory            : 186 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,388 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:54:59:496
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:54:59:515 Close queue connection pool.
+06/06 15:54:59:528 End of process session
+06/06 15:55:09:536 Starting process session
+06/06 15:55:09:564 06/06/2014 15:55:09:556
+Memory information:
+	 :: Free memory            : 185 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,387 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:55:09:556
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:55:09:572 Close queue connection pool.
+06/06 15:55:09:585 End of process session
+06/06 15:55:19:596 Starting process session
+06/06 15:55:19:624 06/06/2014 15:55:19:616
+Memory information:
+	 :: Free memory            : 182 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,384 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:55:19:616
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:55:19:632 Close queue connection pool.
+06/06 15:55:19:644 End of process session
+06/06 15:55:29:653 Starting process session
+06/06 15:55:29:684 06/06/2014 15:55:29:676
+Memory information:
+	 :: Free memory            : 181 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,382 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:55:29:676
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:55:29:693 Close queue connection pool.
+06/06 15:55:29:704 End of process session
+06/06 15:55:39:714 Starting process session
+06/06 15:55:39:742 06/06/2014 15:55:39:734
+Memory information:
+	 :: Free memory            : 178 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,380 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:55:39:734
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:55:39:751 Close queue connection pool.
+06/06 15:55:39:763 End of process session
+06/06 15:55:49:774 Starting process session
+06/06 15:55:49:802 06/06/2014 15:55:49:794
+Memory information:
+	 :: Free memory            : 176 MB
+	 :: Allocated memory       : 361 MB
+	 :: Max memory             : 1,562 MB
+	 :: Total free memory      : 1,378 MB
+	 :: Total free memory      : 88 (%)
+	 :: Disk in used           : 185,719/296,936 MB, Used 62 (%) (/)
+	 :: Total running thread   : 229
+
+Database connection status: 
+	 Number database connection			: 5
+	 Number busy database connection	: 0
+	 Number idle database connection	: 5
+
+06/06/2014 15:55:49:795
+Local pg/CommandRoute queue: 0
+Local pg/Alarm queue: 0
+Total command request for pg/OrderRoute : 0
+Total command request for pg/CCWS : 0
+Total command request for pg/CB : 0
+Total command request for pg/CommandLog : 0
+Total command request for pg/CommandRoute : 0
+
+06/06 15:55:49:812 Close queue connection pool.
+06/06 15:55:49:826 End of process session

@@ -1,0 +1,17 @@
+17/06 11:27:52:866 Queue Monitor started
+17/06 11:27:52:938 Starting process session
+17/06 11:27:58:434 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:58:434 Close queue connection pool.
+17/06 11:27:58:465 End of process session
+17/06 11:28:08:541 Starting process session
+17/06 11:28:08:564 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:564 Close queue connection pool.
+17/06 11:28:08:564 End of process session
+17/06 11:28:18:574 Starting process session
+17/06 11:28:18:598 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:598 Close queue connection pool.
+17/06 11:28:18:599 End of process session
+17/06 11:28:28:607 Starting process session
+17/06 11:28:28:632 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:633 Close queue connection pool.
+17/06 11:28:28:633 End of process session

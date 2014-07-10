@@ -1,0 +1,26 @@
+c3p0-config=c3p0-config.xml
+
+PortID=3324
+MaxConnectionAllowed=3
+LoadingMethod=1
+
+queue.factory.imqAddressList=localhost:7676
+queue.factory.imqAckTimeout=60000
+queue.factory.imqConsumerFlowLimitPrefetch=true
+queue.factory.imqConsumerFlowLimit=100
+queue.factory.imqSocketConnectTimeout=60000
+queue.factory.imqOverrideJMSDeliveryMode=true
+#imqJMSDeliveryMode: 2 persistent, 1 non-persistent
+queue.factory.imqJMSDeliveryMode=1
+
+queue.factory=jms/CCS
+queue.connection=dedicated
+# queue.connection=sharing
+
+queue.orderRoute=pg/OrderRoute
+queue.orderResponse=pg/OrderResponse
+queue.alarm=pg/Alarm
+queue.commandRoute=pg/CommandRoute
+queue.commandLog=pg/CommandLog
+queue.commandCallback=pg/CommandCallback
+queue.commandStatistic=pg/CommandStatistic

@@ -1,0 +1,150 @@
+package com.crm.provisioning.impl.smpp;
+
+import com.crm.provisioning.message.CommandMessage;
+import com.crm.provisioning.thread.SMPPThread;
+import com.crm.thread.DispatcherThread;
+
+import com.logica.smpp.*;
+import com.logica.smpp.pdu.*;
+
+/**
+ * <p>Title: </p>
+ *
+ * <p>Description: </p>
+ *
+ * <p>Copyright: Copyright (c) 2004</p>
+ *
+ * <p>Company: </p>
+ *
+ * @author not attributable
+ * @version 1.0
+ */
+
+/**
+ * Implements simple PDU listener which handles PDUs received from SMSC. It puts
+ * the received requests into a queue and discards all received responses.
+ * Requests then can be fetched (should be) from the queue by calling to the
+ * method <code>getRequestEvent</code>.
+ * 
+ * @see Queue
+ * @see ServerPDUEvent
+ * @see ServerPDUEventListener
+ * @see SmppObject
+ */
+public class PDUEventListener extends SmppObject implements ServerPDUEventListener
+{
+	private Session						session;
+	private com.logica.smpp.util.Queue	requestEvents	= new com.logica.smpp.util.Queue();
+
+	private DispatcherThread			dispatcher		= null;
+
+	public PDUEventListener(Session session)
+	{
+		this.session = session;
+	}
+
+	// //////////////////////////////////////////////////////
+	// process file
+	// Author : ThangPV
+	// Created Date : 16/09/2004
+	// //////////////////////////////////////////////////////
+	public void logMonitor(Object message)
+	{
+		if (dispatcher != null)
+		{
+			dispatcher.logMonitor(message);
+		}
+	}
+
+	// //////////////////////////////////////////////////////
+	// process file
+	// Author : ThangPV
+	// Created Date : 16/09/2004
+	// //////////////////////////////////////////////////////
+	public void debugMonitor(String message)
+	{
+		if (dispatcher != null)
+			dispatcher.debugMonitor(message);
+	}
+
+	public void handleEvent(ServerPDUEvent event)
+	{
+		PDU pdu = event.getPDU();
+		if (pdu == null)
+		{
+			return;
+		}
+
+		if (pdu.isRequest())
+		{
+			if (pdu instanceof DeliverSM)
+			{
+				requestEvents.enqueue(pdu);
+			}
+
+			if (pdu != null)
+			{
+				try
+				{
+					Response response = ((Request) pdu).getResponse();
+
+					// debugMonitor("Send response: " + response.debugString());
+					session.respond(response);
+				}
+				catch (Exception e)
+				{
+					logMonitor(e.getMessage());
+				}
+			}
+		}
+		else if (pdu.isResponse())
+		{
+			debugMonitor("Reponse: async response received " + pdu.debugString());
+		}
+		else
+		{
+			debugMonitor("pdu of unknown class (not request nor response) received, discarding " + pdu.debugString());
+		}
+	}
+
+	/**
+	 * Returns received pdu from the queue. If the queue is empty, the method
+	 * blocks for the specified timeout.
+	 */
+	public ServerPDUEvent getRequestEvent(long timeout)
+	{
+		ServerPDUEvent pduEvent = null;
+
+		synchronized (requestEvents)
+		{
+			if (requestEvents.isEmpty())
+			{
+				try
+				{
+					if (timeout < 0)
+						timeout = 1000;
+					requestEvents.wait(timeout);
+				}
+				catch (InterruptedException e)
+				{
+					// ignoring, actually this is what we're waiting for
+				}
+			}
+			if (!requestEvents.isEmpty())
+			{
+				pduEvent = (ServerPDUEvent) requestEvents.dequeue();
+			}
+		}
+		return pduEvent;
+	}
+
+	public void setDispatcher(DispatcherThread dispatcher)
+	{
+		this.dispatcher = dispatcher;
+	}
+
+	public SMPPThread getDispatcher()
+	{
+		return (SMPPThread) dispatcher;
+	}
+}

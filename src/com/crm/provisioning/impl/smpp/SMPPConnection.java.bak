@@ -1,0 +1,815 @@
+/*
+ * Copyright (c) 1996-2001
+ * Logica Mobile Networks Limited
+ * All rights reserved.
+ *
+ * This software is distributed under Logica Open Source License Version 1.0
+ * ("Licence Agreement"). You shall use it and distribute only in accordance
+ * with the terms of the License Agreement.
+ *
+ */
+package com.crm.provisioning.impl.smpp;
+
+import java.io.UnsupportedEncodingException;
+
+import com.crm.provisioning.cache.ProvisioningConnection;
+import com.crm.provisioning.message.CommandMessage;
+import com.crm.provisioning.impl.smpp.PDUEventListener;
+import com.crm.provisioning.thread.ProvisioningThread;
+import com.crm.util.AppProperties;
+import com.crm.util.StringUtil;
+
+import com.logica.smpp.*;
+import com.logica.smpp.pdu.*;
+import com.logica.smpp.util.ByteBuffer;
+import com.logica.smpp.util.NotEnoughDataInByteBufferException;
+import com.sun.messaging.jmq.jmsserver.multibroker.raptor.handlers.GetInterestUpdateHandler;
+
+public class SMPPConnection extends ProvisioningConnection
+{
+
+	public static String		ENC_GSM7BIT					= "X-Gsm7Bit";
+	public static int			MAX_SMS_LENGTH				= 140;
+
+	public boolean				hasError					= false;
+
+	protected String			mstrNetCode					= "18001923";
+	protected String			mstrServiceNumber			= "9242";
+	protected int				mintMaxMessageStringLength	= 160;
+
+	/**
+	 * This is the SMPP session used for communication with SMSC.
+	 */
+	protected Session			session						= null;
+
+	/**
+	 * If the application is bound to the SMSC.
+	 */
+	protected boolean			mblnBound					= false;
+
+	/**
+	 * How you want to bind to the SMSC: transmitter (t), receiver (r) or
+	 * transciever (tr). Transciever can both send messages and receive
+	 * messages. Note, that if you bind as receiver you can still receive
+	 * responses to you requests (submissions).
+	 */
+	protected String			mstrBindOption				= "t";
+
+	/**
+	 * Indicates that the Session has to be asynchronous. Asynchronous Session
+	 * means that when submitting a Request to the SMSC the Session does not
+	 * wait for a response. Instead the Session is provided with an instance of
+	 * implementation of ServerPDUListener from the smpp library which receives
+	 * all PDUs received from the SMSC. It's application responsibility to match
+	 * the received Response with sended Requests.
+	 */
+	protected boolean			mblnAsynchronous			= false;
+
+	/**
+	 * This is an instance of listener which obtains all PDUs received from the
+	 * SMSC. Application doesn't have explicitly call Session's receive()
+	 * function, all PDUs are passed to this application callback object. See
+	 * documentation in Session, Receiver and ServerPDUEventListener classes
+	 * form the SMPP library.
+	 */
+	protected PDUEventListener	pduListener					= null;
+
+	/**
+	 * The range of addresses the smpp session will serve.
+	 */
+	protected byte				addressTON					= 1;
+	protected byte				addressNPI					= 1;
+	protected String			mstrAddressRange			= "9242";
+	protected AddressRange		addressRange				= new AddressRange();
+
+	/**
+	 * The range of addresses the smpp session will serve.
+	 */
+	protected byte				sourceTON					= 1;
+	protected byte				sourceNPI					= 1;
+	protected String			mstrSourceAddress			= "84983589789";
+	protected Address			sourceAddress				= new Address();
+
+	/**
+	 * The range of addresses the smpp session will serve.
+	 */
+	protected byte				destTON						= 1;
+	protected byte				destNPI						= 1;
+	protected String			mstrDestAddress				= "9242";
+	protected Address			destAddress					= new Address();
+
+	/*
+	 * for information about these variables have a look in SMPP 3.4
+	 * specification
+	 */
+	protected String			mstrSystemType				= "SMPP";
+	protected String			mstrServiceType				= "";
+
+	protected boolean			useConcatenated				= false;
+
+	/**
+	 * If you attemt to receive message, how long will the application wait for
+	 * data.
+	 */
+	protected long				timeout						= Data.RECEIVE_BLOCKING;
+
+	protected String			scheduleDeliveryTime		= "";
+	protected String			validityPeriod				= "";
+	protected String			strServiceNumber;
+	protected String			messageId					= "";
+	protected byte				esmClass					= 0;
+	protected byte				protocolId					= 0;
+	protected byte				priorityFlag				= 0;
+	protected byte				registeredDelivery			= 0;
+	protected byte				replaceIfPresentFlag		= 0;
+	protected byte				dataCoding					= 0;
+	protected byte				smDefaultMsgId				= 0;
+
+	/**
+	 * Initialises the application, lods default values for connection to SMSC
+	 * and for various PDU fields.
+	 * 
+	 * @param mainThread
+	 *            ManageableThread
+	 * @param connection
+	 *            Connection
+	 */
+	public SMPPConnection() throws Exception
+	{
+		super();
+	}
+	
+	@Override
+	public void setParameters(AppProperties parameters) throws Exception
+	{
+		// TODO Auto-generated method stub
+		super.setParameters(parameters);
+		
+		useConcatenated = parameters.getBoolean("useConcatenated", false);
+	}
+
+	@Override
+	public boolean openConnection() throws Exception
+	{
+		try
+		{
+			String bindMode = parameters.getString("bindOption");
+
+			if (bindMode.equalsIgnoreCase("transmitter"))
+			{
+				mstrBindOption = "t";
+			}
+			else if (bindMode.equalsIgnoreCase("receiver"))
+			{
+				mstrBindOption = "r";
+			}
+			else if (bindMode.equalsIgnoreCase("transciever"))
+			{
+				mstrBindOption = "tr";
+			}
+			else if (!mstrBindOption.equalsIgnoreCase("t") &&
+					!mstrBindOption.equalsIgnoreCase("r") &&
+					!mstrBindOption.equalsIgnoreCase("tr"))
+			{
+				logMonitor("The value of bind-mode parameter in " +
+						"the configuration file " + "com/smpp.cfg" +
+						" is wrong. " +
+						"Setting the default");
+				mstrBindOption = "t";
+			}
+
+			mblnAsynchronous = parameters.getBoolean("asynchronous", false);
+
+			// address range
+			mstrAddressRange = parameters.getString("addressRange", "");
+			addressTON = parameters.getByte("addressTON", Byte.valueOf("1"));
+			addressNPI = parameters.getByte("addressNPI", Byte.valueOf("1"));
+
+			mstrSourceAddress = parameters.getString("sourceAddress", "");
+			mstrServiceNumber = parameters.getString("serviceAddress", "");
+			sourceTON = parameters.getByte("sourceTON", Byte.valueOf("1"));
+			sourceNPI = parameters.getByte("sourceTON", Byte.valueOf("1"));
+
+			mstrDestAddress = parameters.getString("destAddress", "");
+			destTON = parameters.getByte("destTON", Byte.valueOf("1"));
+			destNPI = parameters.getByte("destTON", Byte.valueOf("1"));
+
+			registeredDelivery = parameters.getByte("registeredDelivery", Byte.valueOf("0"));
+
+			bind();
+		}
+		catch (Exception e)
+		{
+			throw e;
+		}
+
+		return super.openConnection();
+	}
+
+	@Override
+	public boolean closeConnection() throws Exception
+	{
+		unbind();
+
+		return super.closeConnection();
+	}
+
+	@Override
+	public boolean validate() throws Exception
+	{
+		try
+		{
+			enquireLink();
+
+			return true;
+		}
+		catch (Exception e)
+		{
+			logMonitor(e);
+		}
+
+		return false;
+	}
+
+	// Sets attributes of <code>Address</code> to the provided values.
+	public void setAddressParameter(String descr, Address address, byte ton, byte npi, String addr) throws Exception
+	{
+		address.setTon(ton);
+		address.setNpi(npi);
+
+		try
+		{
+			address.setAddress(addr);
+		}
+		catch (WrongLengthOfStringException e)
+		{
+			logMonitor("The length of " + descr + " parameter is wrong.");
+
+			throw e;
+		}
+	}
+
+	/**
+	 * The first method called to start communication betwen an ESME and a SMSC.
+	 * A new instance of <code>TCPIPConnection</code> is created and the IP
+	 * address and port obtained from user are passed to this instance. New
+	 * <code>Session</code> is created which uses the created
+	 * <code>TCPIPConnection</code>. All the parameters required for a bind are
+	 * set to the <code>BindRequest</code> and this request is passed to the
+	 * <code>Session</code>'s <code>bind</code> method. If the call is
+	 * successful, the application should be bound to the SMSC. See "SMPP
+	 * Protocol Specification 3.4, 4.1 BIND Operation."
+	 * 
+	 * @see BindRequest
+	 * @see BindResponse
+	 * @see TCPIPConnection
+	 * @see Session#bind(BindRequest)
+	 * @see Session#bind(BindRequest,ServerPDUEventListener)
+	 * @throws Exception
+	 */
+	public void bind() throws Exception
+	{
+		BindRequest request = null;
+		BindResponse response = null;
+
+		try
+		{
+			if (mblnBound)
+			{
+				this.unbind();
+			}
+
+			logMonitor("Connecting to SMSC ");
+			initParameter();
+
+			if (mstrBindOption.compareToIgnoreCase("t") == 0)
+			{
+				request = new BindTransmitter();
+			}
+			else if (mstrBindOption.compareToIgnoreCase("r") == 0)
+			{
+				request = new BindReceiver();
+			}
+			else if (mstrBindOption.compareToIgnoreCase("tr") == 0)
+			{
+				request = new BindTransciever();
+			}
+			else
+			{
+				throw new Exception(
+						"Invalid bind mode, expected t, r or tr, got " +
+								mstrBindOption + ". Operation canceled.");
+			}
+
+			TCPIPConnection connection = new TCPIPConnection(host, port);
+			connection.setReceiveTimeout(timeout * 1000);
+			session = new Session(connection);
+
+			// set values
+			request.setSystemId(userName);
+			request.setPassword(password);
+
+			request.setSystemType(mstrSystemType);
+			// request.setInterfaceVersion((byte)0x34);
+			request.setAddressRange(addressRange);
+
+			// send the request
+			logMonitor("Bind request " + request.debugString());
+			if (mblnAsynchronous)
+			{
+				pduListener = new PDUEventListener(session);
+				setDispatcher(getDispatcher());
+				response = session.bind(request, pduListener);
+			}
+			else
+			{
+				response = session.bind(request);
+			}
+			logMonitor("Bind response " + response.debugString());
+			if (response.getCommandStatus() == Data.ESME_ROK)
+			{
+				mblnBound = true;
+			}
+
+			hasError = false;
+
+			logMonitor("SMSC connection is established ");
+		}
+		catch (Exception e)
+		{
+			// event.write(e, "");
+			// debug.write("Bind operation failed. " + e);
+
+			logMonitor("Bind operation failed. " + e);
+			throw e;
+		}
+		finally
+		{
+		}
+	}
+
+	/**
+	 * Ubinds (logs out) from the SMSC and closes the connection.
+	 * 
+	 * See "SMPP Protocol Specification 3.4, 4.2 UNBIND Operation."
+	 * 
+	 * @see Session#unbind()
+	 * @see Unbind
+	 * @see UnbindResp
+	 */
+	public void unbind() throws Exception
+	{
+		// debug.enter(this, "SMPPTest.unbind()");
+		try
+		{
+			if (!mblnBound)
+			{
+				logMonitor("Not bound, cannot unbind.");
+				return;
+			}
+
+			// send the request
+			logMonitor("Going to unbind.");
+			if (session.getReceiver().isReceiver())
+			{
+				logMonitor("It can take a while to stop the receiver.");
+			}
+			UnbindResp response = session.unbind();
+			logMonitor("Unbind response " + response.debugString());
+			mblnBound = false;
+		}
+		catch (Exception e)
+		{
+			// event.write(e, "");
+			// debug.write("Unbind operation failed. " + e);
+			e.printStackTrace();
+			logMonitor("Unbind operation failed. " + e);
+		}
+		finally
+		{
+			mblnBound = false;
+			hasError = false;
+			// debug.exit(this);
+		}
+	}
+
+	/**
+	 * Create SubmitSM <br>
+	 * Author: NamTA <br>
+	 * Created Date: 23/04/2012
+	 * 
+	 * @param request
+	 * @return
+	 * @throws WrongLengthOfStringException
+	 * @throws WrongDateFormatException
+	 */
+	private SubmitSM createSubmitSM(CommandMessage request) throws WrongLengthOfStringException, WrongDateFormatException
+	{
+
+		String smsContent = StringUtil.nvl(request.getRequest(), "");
+
+		// prepare SMPP request
+		SubmitSM submitRequest = new SubmitSM();
+
+		// set values
+		submitRequest.setServiceType(mstrServiceType);
+
+		if (request.getIsdn().equals(""))
+		{
+			submitRequest.setSourceAddr(mstrServiceNumber);
+			request.setIsdn(mstrServiceNumber);
+		}
+		else
+			submitRequest.setSourceAddr(request.getServiceAddress());
+
+		submitRequest.setDestAddr(request.getIsdn());
+
+		submitRequest.setReplaceIfPresentFlag(replaceIfPresentFlag);
+
+		submitRequest.setScheduleDeliveryTime(scheduleDeliveryTime);
+		submitRequest.setValidityPeriod(validityPeriod);
+		submitRequest.setEsmClass(esmClass);
+		submitRequest.setProtocolId(protocolId);
+		submitRequest.setPriorityFlag(priorityFlag);
+		submitRequest.setRegisteredDelivery((byte) registeredDelivery);
+		submitRequest.setSmDefaultMsgId(smDefaultMsgId);
+
+		submitRequest.assignSequenceNumber(true);
+
+		if (null != smsContent && smsContent.length() > mintMaxMessageStringLength)
+		{
+			ByteBuffer bbuff = new ByteBuffer();
+			bbuff.appendString(smsContent);
+			submitRequest.setMessagePayload(bbuff);
+		}
+		else
+			submitRequest.setShortMessage(smsContent);
+
+		return submitRequest;
+	}
+
+	/**
+	 * Create concatenated SubmitSMs <br>
+	 * Author: NamTA <br>
+	 * Created Date: 23/04/2012
+	 * 
+	 * @param request
+	 * @return
+	 * @throws WrongLengthOfStringException
+	 * @throws UnsupportedEncodingException
+	 * @throws WrongDateFormatException
+	 * @throws NotEnoughDataInByteBufferException
+	 */
+	private SubmitSM[] createConcatenatedSubmitSM(CommandMessage request) throws WrongLengthOfStringException,
+			UnsupportedEncodingException, WrongDateFormatException, NotEnoughDataInByteBufferException
+	{
+
+		String smsContent = StringUtil.nvl(request.getRequest(), "");
+		int messageContentLength = 153;
+
+		ByteBuffer messageData = new ByteBuffer();
+
+		try
+		{
+			messageData.appendBytes(smsContent.getBytes(ENC_GSM7BIT));
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			try
+			{
+				messageData.appendBytes(smsContent.getBytes(Data.ENC_ASCII));
+			}
+			catch (UnsupportedEncodingException uee)
+			{
+				throw uee;
+			}
+		}
+
+		int total = 0;
+		total = (int) (messageData.length() / messageContentLength);
+		if (messageData.length() % messageContentLength != 0)
+		{
+			total = total + 1;
+		}
+
+		SubmitSM[] submitRequests = new SubmitSM[total];
+
+		for (int index = 1; index <= total; index++)
+		{
+			submitRequests[index - 1] = new SubmitSM();
+			SubmitSM submitRequest = submitRequests[index - 1];
+
+			submitRequest.setServiceType(mstrServiceType);
+
+			if (request.getIsdn().equals(""))
+			{
+				submitRequest.setSourceAddr(mstrServiceNumber);
+				request.setIsdn(mstrServiceNumber);
+			}
+			else
+				submitRequest.setSourceAddr(request.getIsdn());
+
+			submitRequest.setDestAddr(request.getShipTo());
+
+			submitRequest.setReplaceIfPresentFlag(replaceIfPresentFlag);
+
+			submitRequest.setScheduleDeliveryTime(scheduleDeliveryTime);
+			submitRequest.setValidityPeriod(validityPeriod);
+			submitRequest.setProtocolId(protocolId);
+			submitRequest.setPriorityFlag(priorityFlag);
+			submitRequest.setRegisteredDelivery((byte) registeredDelivery);
+			submitRequest.setSmDefaultMsgId(smDefaultMsgId);
+
+			submitRequest.assignSequenceNumber(true);
+			submitRequest.setEsmClass((byte) Data.SM_UDH_GSM);
+
+			ByteBuffer dataBuffer = new ByteBuffer();
+
+			// user data header
+			dataBuffer.appendByte((byte) 0x05);
+
+			// Information Element Identifier (IEI; concatenated short message,
+			// 8-bit
+			dataBuffer.appendByte((byte) 0x00);
+			// Information Element Data Length (IEDL)
+			dataBuffer.appendByte((byte) 0x03);
+			// Information Element Data (concatenated short message reference
+			// number)
+			dataBuffer.appendByte((byte) 0xA4);
+			// Information Element Data (total number of concatenated messages
+			// (0-255))
+			dataBuffer.appendByte((byte) total);
+			// Information Element Data (sequence number of current short
+			// message)
+			dataBuffer.appendByte((byte) index);
+
+			if (index == total)
+			{
+				dataBuffer.appendBuffer(messageData);
+			}
+			else
+			{
+				dataBuffer.appendBuffer(messageData.removeBytes(messageContentLength));
+			}
+			submitRequest.setShortMessage(new String(dataBuffer.getBuffer(), Data.ENC_ASCII), Data.ENC_ASCII);
+		}
+
+		return submitRequests;
+	}
+
+	/**
+	 * Submit SubmitSM <br>
+	 * Author: NamTA <br>
+	 * Created Date: 23/04/2012
+	 * 
+	 * @param submitRequest
+	 * @throws Exception
+	 */
+	private void submit(SubmitSM submitRequest) throws Exception
+	{
+		try
+		{
+			SubmitSMResp submitResponse = null;
+
+			if (mblnAsynchronous)
+			{
+				session.submit(submitRequest);
+			}
+			else
+			{
+				submitResponse = session.submit(submitRequest);
+				logMonitor("Submit response " + submitResponse.debugString());
+				messageId = submitResponse.getMessageId();
+			}
+
+		}
+		catch (Exception e)
+		{
+			logMonitor("Submit operation failed. " + e);
+			throw e;
+		}
+		finally
+		{
+		}
+	}
+
+	/**
+	 * Submit request <br>
+	 * Author : ThangPV <br>
+	 * Created Date : 16/09/2004 <br>
+	 * Edited By: NamTA <br>
+	 * Edited Date : 23/04/2012
+	 * 
+	 * @param request
+	 * @throws Exception
+	 */
+	public synchronized void submit(CommandMessage request) throws Exception
+	{
+		try
+		{
+			String smsContent = StringUtil.nvl(request.getRequest(), "");
+
+			if (smsContent.length() == 0)
+			{
+				return;
+			}
+
+			if (smsContent.length() > mintMaxMessageStringLength &
+					useConcatenated)
+			{
+				SubmitSM[] submitRequests = createConcatenatedSubmitSM(request);
+				for (SubmitSM submitRequest : submitRequests)
+				{
+					getDispatcher().debugMonitor("Submit concatenated request " + submitRequest.debugString());
+					submit(submitRequest);
+				}
+			}
+			else
+			{
+				// prepare SMPP request
+				SubmitSM submitRequest = createSubmitSM(request);
+				getDispatcher().debugMonitor("Submit request " + submitRequest.debugString());
+				submit(submitRequest);
+			}
+		}
+		catch (Exception e)
+		{
+			throw e;
+		}
+
+	}
+
+	/**
+	 * Creates a new instance of <code>EnquireSM</code> class. This PDU is used
+	 * to check that application level of the other party is alive. It can be
+	 * sent both by SMSC and ESME.
+	 * 
+	 * See "SMPP Protocol Specification 3.4, 4.11 ENQUIRE_LINK Operation."
+	 * 
+	 * @see Session#enquireLink(EnquireLink)
+	 * @see EnquireLink
+	 * @see EnquireLinkResp
+	 */
+	public boolean enquireLink() throws Exception
+	{
+		// debug.enter(this, "SMPPTest.enquireLink()");
+		try
+		{
+
+			EnquireLink request = new EnquireLink();
+			EnquireLinkResp response = null;
+
+			getDispatcher().debugMonitor("Enquire Link request " + request.debugString());
+
+			if (mblnAsynchronous)
+			{
+				session.enquireLink(request);
+			}
+			else
+			{
+				response = session.enquireLink(request);
+				getDispatcher().logMonitor("Enquire Link response " + response.debugString());
+			}
+		}
+		catch (Exception e)
+		{
+			hasError = true;
+			getDispatcher().logMonitor("Enquire Link operation failed. " + e);
+
+			throw e;
+		}
+		finally
+		{
+			// debug.exit(this);
+		}
+
+		return true;
+	}
+
+	/**
+	 * Receives one PDU of any type from SMSC and prints it on the screen.
+	 * 
+	 * @see Session#receive()
+	 * @see Response
+	 * @see ServerPDUEvent
+	 */
+	public synchronized CommandMessage receive() throws Exception
+	{
+		// debug.enter(this, "SMPPTest.receive()");
+		try
+		{
+
+			PDU pdu = null;
+			System.out.print("Going to receive a PDU. ");
+			if (timeout == Data.RECEIVE_BLOCKING)
+			{
+				System.out.print("The receive is blocking, i.e. the application " +
+						"will stop until a PDU will be received.");
+			}
+			else
+			{
+				System.out.print("The receive timeout is " + timeout / 1000 + " sec.");
+			}
+
+			if (mblnAsynchronous)
+			{
+				ServerPDUEvent pduEvent = pduListener.getRequestEvent(timeout);
+				if (pduEvent != null)
+				{
+					pdu = pduEvent.getPDU();
+				}
+			}
+			else
+			{
+				pdu = session.receive(timeout);
+				if (pdu != null)
+				{
+					logMonitor("Received data: " + pdu.getData().getHexDump());
+					if (pdu.isRequest())
+					{
+						Response response = ((Request) pdu).getResponse();
+						// respond with default response
+						// logMonitor("Going to send default response to request "
+						// + response.debugString());
+						session.respond(response);
+					}
+				}
+			}
+			if (pdu == null)
+			{
+				logMonitor("No PDU received this time.");
+			}
+			else if (pdu != null & pdu instanceof DeliverSM)
+			{
+				try
+				{
+					DeliverSM deliverSM = (DeliverSM) pdu;
+
+					logMonitor("Message receiver: " + deliverSM.debugString());
+
+					CommandMessage sms = new CommandMessage();
+
+					sms.setChannel("SMS");
+					sms.setIsdn(deliverSM.getSourceAddr().getAddress());
+					sms.setServiceAddress(deliverSM.getDestAddr().getAddress());
+					sms.setShipTo(deliverSM.getDestAddr().getAddress());
+
+					sms.setRequest(deliverSM.getShortMessage().toUpperCase());
+					sms.setKeyword(deliverSM.getShortMessage().toUpperCase());
+
+					return sms;
+				}
+				catch (Exception e)
+				{
+					logMonitor(e);
+					throw e;
+				}
+			}
+
+			return null;
+		}
+		catch (Exception e)
+		{
+			// event.write(e, "");
+			// debug.write("Receiving failed. " + e);
+			logMonitor("Receiving failed. " + e);
+			throw e;
+		}
+	}
+
+	/**
+	 * Loads configuration parameters from the file with the given name. Sets
+	 * private variable to the loaded values.
+	 * 
+	 * @throws Exception
+	 */
+	private void initParameter() throws Exception
+	{
+		addressRange.setTon(addressTON);
+		addressRange.setNpi(addressNPI);
+
+		try
+		{
+			addressRange.setAddressRange(mstrAddressRange);
+		}
+		catch (WrongLengthOfStringException e)
+		{
+			logMonitor("The length of address-range parameter is wrong.");
+			throw e;
+		}
+
+		setAddressParameter("source-address", sourceAddress, sourceTON, sourceNPI, mstrSourceAddress);
+
+		setAddressParameter("destination-address", destAddress, destTON, destNPI, mstrDestAddress);
+	}
+
+	public void setDispatcher(ProvisioningThread dispatcher)
+	{
+		super.setDispatcher(dispatcher);
+
+		if (pduListener != null)
+		{
+			pduListener.setDispatcher(dispatcher);
+		}
+	}
+}

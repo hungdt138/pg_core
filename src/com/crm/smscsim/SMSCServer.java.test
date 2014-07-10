@@ -1,0 +1,187 @@
+package com.crm.smscsim;
+
+import java.io.IOException;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import com.crm.ascs.net.NetThread;
+import com.crm.smscsim.thread.SMSCInstance;
+import com.crm.smscsim.thread.SMSCThread;
+import com.crm.thread.DispatcherInstance;
+import com.crm.thread.DispatcherThread;
+import com.logica.smpp.Connection;
+import com.logica.smpp.TCPIPConnection;
+
+public class SMSCServer extends NetThread
+{
+	private int			currentId			= 1;
+	private Connection	serverConnection	= null;
+	private int			port				= 0;
+	private int			receiveTimeout		= 1000;
+	private int			maxConnection		= 10;
+
+	private SMSCThread	dispatcher			= null;
+
+	public void setDispatcher(DispatcherThread dispatcher)
+	{
+		this.dispatcher = (SMSCThread)dispatcher;
+	}
+
+	public DispatcherThread getDispatcher()
+	{
+		return dispatcher;
+	}
+
+	public int getPort()
+	{
+		return port;
+	}
+
+	public int getReceiveTimeout()
+	{
+		return receiveTimeout;
+	}
+
+	public void setReceiveTimeout(int receiveTimeout)
+	{
+		this.receiveTimeout = receiveTimeout;
+	}
+
+	public void setMaxConnection(int maxConnection)
+	{
+		this.maxConnection = maxConnection;
+	}
+
+	public int getMaxConnection()
+	{
+		return maxConnection;
+	}
+
+	public SMSCServer(int port)
+	{
+		this.port = port;
+	}
+
+	@Override
+	public void start()
+	{
+		if (isRunning())
+			destroy();
+		try
+		{
+			openConnection();
+		}
+		catch (Exception e)
+		{
+
+		}
+		super.start();
+	}
+
+	private void openConnection() throws Exception
+	{
+		if (serverConnection != null)
+			return;
+		serverConnection = new TCPIPConnection(port);
+		serverConnection.setReceiveTimeout(receiveTimeout);
+		serverConnection.open();
+	}
+
+	private void closeConnection() throws IOException
+	{
+		try
+		{
+			if (serverConnection == null)
+				return;
+			serverConnection.close();
+		}
+		finally
+		{
+			serverConnection = null;
+		}
+	}
+
+	@Override
+	public void stop()
+	{
+		destroy();
+	}
+
+	@Override
+	public void destroy()
+	{
+		if (!isRunning())
+			return;
+
+		try
+		{
+			super.destroy();
+
+			try
+			{
+				closeConnection();
+			}
+			catch (IOException e)
+			{
+				debugMonitor(e);
+			}
+		}
+		catch (Exception e)
+		{
+			debugMonitor(e);
+		}
+		finally
+		{
+			// super.destroy();
+		}
+	}
+
+	@Override
+	public void process() throws Exception
+	{
+		try
+		{
+			if (!isRunning())
+			{
+				stop();
+				return;
+			}
+
+			if (((SMSCThread) dispatcher).connectionCount >= maxConnection)
+			{
+				closeConnection();
+			}
+			else
+			{
+				openConnection();
+				Connection connection = serverConnection.accept();
+				if (connection != null)
+				{
+					connection.setReceiveTimeout(receiveTimeout);
+					connection.setCommsTimeout(receiveTimeout);
+					SMSCSession session = new SMSCSession(connection);
+					session.setDispatcher(dispatcher);
+					dispatcher.putToFreeInstance(session, currentId++);
+					session.startSession();
+				}
+			}
+		}
+		catch (SocketTimeoutException ste)
+		{
+		}
+		catch (SocketException se)
+		{
+		}
+		catch (Exception e)
+		{
+			closeConnection();
+			throw e;
+		}
+	}
+
+	@Override
+	public void debugMonitor(Object message)
+	{
+		if (dispatcher != null)
+			dispatcher.debugMonitor(message);
+	}
+}

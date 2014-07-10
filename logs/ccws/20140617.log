@@ -1,0 +1,377 @@
+17/06 11:27:52:840 CCWS started
+17/06 11:27:56:717 Testing connection ...
+17/06 11:27:58:677 Created provisioning instance for CCWS
+17/06 11:27:58:707 Testing connection are success
+17/06 11:27:58:707 Starting process session
+17/06 11:27:58:835 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:58:835 Consumer was closed, reconnect.
+17/06 11:27:59:055 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:59:055 Consumer was closed, reconnect.
+17/06 11:27:59:243 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:59:243 Consumer was closed, reconnect.
+17/06 11:27:59:471 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:59:472 Consumer was closed, reconnect.
+17/06 11:27:59:649 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:59:649 Consumer was closed, reconnect.
+17/06 11:27:59:845 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:27:59:846 Consumer was closed, reconnect.
+17/06 11:28:00:050 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:00:051 Consumer was closed, reconnect.
+17/06 11:28:00:251 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:00:252 Consumer was closed, reconnect.
+17/06 11:28:00:452 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:00:452 Consumer was closed, reconnect.
+17/06 11:28:00:682 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:00:682 Consumer was closed, reconnect.
+17/06 11:28:00:858 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:00:859 Consumer was closed, reconnect.
+17/06 11:28:01:059 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:01:059 Consumer was closed, reconnect.
+17/06 11:28:01:265 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:01:266 Consumer was closed, reconnect.
+17/06 11:28:01:468 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:01:468 Consumer was closed, reconnect.
+17/06 11:28:01:686 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:01:686 Consumer was closed, reconnect.
+17/06 11:28:01:872 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:01:872 Consumer was closed, reconnect.
+17/06 11:28:02:073 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:02:073 Consumer was closed, reconnect.
+17/06 11:28:02:312 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:02:317 Consumer was closed, reconnect.
+17/06 11:28:02:481 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:02:481 Consumer was closed, reconnect.
+17/06 11:28:02:685 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:02:685 Consumer was closed, reconnect.
+17/06 11:28:02:900 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:02:900 Consumer was closed, reconnect.
+17/06 11:28:03:086 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:03:086 Consumer was closed, reconnect.
+17/06 11:28:03:288 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:03:288 Consumer was closed, reconnect.
+17/06 11:28:03:491 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:03:491 Consumer was closed, reconnect.
+17/06 11:28:03:691 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:03:691 Consumer was closed, reconnect.
+17/06 11:28:03:924 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:03:924 Consumer was closed, reconnect.
+17/06 11:28:04:098 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:04:098 Consumer was closed, reconnect.
+17/06 11:28:04:297 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:04:297 Consumer was closed, reconnect.
+17/06 11:28:04:560 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:04:560 Consumer was closed, reconnect.
+17/06 11:28:04:718 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:04:718 Consumer was closed, reconnect.
+17/06 11:28:04:929 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:04:929 Consumer was closed, reconnect.
+17/06 11:28:05:109 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:05:109 Consumer was closed, reconnect.
+17/06 11:28:05:310 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:05:310 Consumer was closed, reconnect.
+17/06 11:28:05:506 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:05:506 Consumer was closed, reconnect.
+17/06 11:28:05:715 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:05:715 Consumer was closed, reconnect.
+17/06 11:28:05:918 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:05:918 Consumer was closed, reconnect.
+17/06 11:28:06:119 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:06:119 Consumer was closed, reconnect.
+17/06 11:28:06:341 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:06:341 Consumer was closed, reconnect.
+17/06 11:28:06:522 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:06:522 Consumer was closed, reconnect.
+17/06 11:28:06:726 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:06:726 Consumer was closed, reconnect.
+17/06 11:28:06:802 Total 0 instances are started
+17/06 11:28:06:802 Total 40 instances are added
+17/06 11:28:07:032 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:07:032 Consumer was closed, reconnect.
+17/06 11:28:07:237 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:07:237 Consumer was closed, reconnect.
+17/06 11:28:07:445 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:07:445 Consumer was closed, reconnect.
+17/06 11:28:07:643 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:07:643 Consumer was closed, reconnect.
+17/06 11:28:07:854 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:07:854 Consumer was closed, reconnect.
+17/06 11:28:08:067 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:068 Consumer was closed, reconnect.
+17/06 11:28:08:320 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:320 Consumer was closed, reconnect.
+17/06 11:28:08:453 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:454 Consumer was closed, reconnect.
+17/06 11:28:08:646 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:646 Consumer was closed, reconnect.
+17/06 11:28:08:846 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:08:847 Consumer was closed, reconnect.
+17/06 11:28:09:070 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:09:070 Consumer was closed, reconnect.
+17/06 11:28:09:280 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:09:280 Consumer was closed, reconnect.
+17/06 11:28:09:485 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:09:485 Consumer was closed, reconnect.
+17/06 11:28:09:664 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:09:664 Consumer was closed, reconnect.
+17/06 11:28:09:859 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:09:859 Consumer was closed, reconnect.
+17/06 11:28:10:061 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:10:061 Consumer was closed, reconnect.
+17/06 11:28:10:262 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:10:263 Consumer was closed, reconnect.
+17/06 11:28:10:463 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:10:463 Consumer was closed, reconnect.
+17/06 11:28:10:668 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:10:668 Consumer was closed, reconnect.
+17/06 11:28:10:871 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:10:871 Consumer was closed, reconnect.
+17/06 11:28:11:067 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:11:067 Consumer was closed, reconnect.
+17/06 11:28:11:270 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:11:270 Consumer was closed, reconnect.
+17/06 11:28:11:475 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:11:475 Consumer was closed, reconnect.
+17/06 11:28:11:680 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:11:680 Consumer was closed, reconnect.
+17/06 11:28:11:888 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:11:888 Consumer was closed, reconnect.
+17/06 11:28:12:098 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:12:098 Consumer was closed, reconnect.
+17/06 11:28:12:287 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:12:287 Consumer was closed, reconnect.
+17/06 11:28:12:488 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:12:488 Consumer was closed, reconnect.
+17/06 11:28:12:690 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:12:690 Consumer was closed, reconnect.
+17/06 11:28:12:891 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:12:892 Consumer was closed, reconnect.
+17/06 11:28:13:101 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:13:101 Consumer was closed, reconnect.
+17/06 11:28:13:315 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:13:316 Consumer was closed, reconnect.
+17/06 11:28:13:500 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:13:500 Consumer was closed, reconnect.
+17/06 11:28:13:701 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:13:701 Consumer was closed, reconnect.
+17/06 11:28:13:906 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:13:906 Consumer was closed, reconnect.
+17/06 11:28:14:107 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:14:107 Consumer was closed, reconnect.
+17/06 11:28:14:308 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:14:309 Consumer was closed, reconnect.
+17/06 11:28:14:509 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:14:509 Consumer was closed, reconnect.
+17/06 11:28:14:714 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:14:714 Consumer was closed, reconnect.
+17/06 11:28:14:915 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:14:916 Consumer was closed, reconnect.
+17/06 11:28:14:993 Total 0 instances are started
+17/06 11:28:14:993 Total 40 instances are added
+17/06 11:28:15:243 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:15:243 Consumer was closed, reconnect.
+17/06 11:28:15:423 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:15:423 Consumer was closed, reconnect.
+17/06 11:28:15:627 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:15:628 Consumer was closed, reconnect.
+17/06 11:28:15:829 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:15:829 Consumer was closed, reconnect.
+17/06 11:28:16:032 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:16:032 Consumer was closed, reconnect.
+17/06 11:28:16:270 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:16:270 Consumer was closed, reconnect.
+17/06 11:28:16:442 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:16:442 Consumer was closed, reconnect.
+17/06 11:28:16:643 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:16:643 Consumer was closed, reconnect.
+17/06 11:28:16:846 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:16:846 Consumer was closed, reconnect.
+17/06 11:28:17:655 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:17:655 Consumer was closed, reconnect.
+17/06 11:28:17:717 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:17:717 Consumer was closed, reconnect.
+17/06 11:28:17:885 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:17:886 Consumer was closed, reconnect.
+17/06 11:28:17:907 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:17:907 Consumer was closed, reconnect.
+17/06 11:28:17:972 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:17:972 Consumer was closed, reconnect.
+17/06 11:28:18:077 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:077 Consumer was closed, reconnect.
+17/06 11:28:18:259 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:259 Consumer was closed, reconnect.
+17/06 11:28:18:466 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:467 Consumer was closed, reconnect.
+17/06 11:28:18:681 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:681 Consumer was closed, reconnect.
+17/06 11:28:18:882 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:18:882 Consumer was closed, reconnect.
+17/06 11:28:19:068 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:19:068 Consumer was closed, reconnect.
+17/06 11:28:19:271 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:19:272 Consumer was closed, reconnect.
+17/06 11:28:19:472 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:19:472 Consumer was closed, reconnect.
+17/06 11:28:19:676 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:19:676 Consumer was closed, reconnect.
+17/06 11:28:19:877 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:19:877 Consumer was closed, reconnect.
+17/06 11:28:20:079 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:20:079 Consumer was closed, reconnect.
+17/06 11:28:20:282 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:20:282 Consumer was closed, reconnect.
+17/06 11:28:20:484 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:20:484 Consumer was closed, reconnect.
+17/06 11:28:20:685 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:20:685 Consumer was closed, reconnect.
+17/06 11:28:20:887 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:20:887 Consumer was closed, reconnect.
+17/06 11:28:21:088 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:21:088 Consumer was closed, reconnect.
+17/06 11:28:21:288 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:21:289 Consumer was closed, reconnect.
+17/06 11:28:21:497 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:21:497 Consumer was closed, reconnect.
+17/06 11:28:21:709 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:21:710 Consumer was closed, reconnect.
+17/06 11:28:21:898 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:21:898 Consumer was closed, reconnect.
+17/06 11:28:22:097 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:22:097 Consumer was closed, reconnect.
+17/06 11:28:22:300 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:22:301 Consumer was closed, reconnect.
+17/06 11:28:22:508 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:22:508 Consumer was closed, reconnect.
+17/06 11:28:22:722 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:22:722 Consumer was closed, reconnect.
+17/06 11:28:22:907 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:22:907 Consumer was closed, reconnect.
+17/06 11:28:23:109 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:23:109 Consumer was closed, reconnect.
+17/06 11:28:23:187 Total 0 instances are started
+17/06 11:28:23:188 Total 40 instances are added
+17/06 11:28:23:435 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:23:436 Consumer was closed, reconnect.
+17/06 11:28:23:638 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:23:638 Consumer was closed, reconnect.
+17/06 11:28:23:815 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:23:816 Consumer was closed, reconnect.
+17/06 11:28:24:028 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:24:028 Consumer was closed, reconnect.
+17/06 11:28:24:253 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:24:254 Consumer was closed, reconnect.
+17/06 11:28:24:435 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:24:436 Consumer was closed, reconnect.
+17/06 11:28:24:639 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:24:640 Consumer was closed, reconnect.
+17/06 11:28:24:842 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:24:842 Consumer was closed, reconnect.
+17/06 11:28:25:044 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:25:045 Consumer was closed, reconnect.
+17/06 11:28:25:247 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:25:247 Consumer was closed, reconnect.
+17/06 11:28:25:448 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:25:449 Consumer was closed, reconnect.
+17/06 11:28:25:652 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:25:652 Consumer was closed, reconnect.
+17/06 11:28:25:863 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:25:864 Consumer was closed, reconnect.
+17/06 11:28:26:054 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:26:055 Consumer was closed, reconnect.
+17/06 11:28:26:312 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:26:312 Consumer was closed, reconnect.
+17/06 11:28:26:460 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:26:460 Consumer was closed, reconnect.
+17/06 11:28:26:668 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:26:668 Consumer was closed, reconnect.
+17/06 11:28:26:883 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:26:883 Consumer was closed, reconnect.
+17/06 11:28:27:066 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:27:067 Consumer was closed, reconnect.
+17/06 11:28:27:270 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:27:271 Consumer was closed, reconnect.
+17/06 11:28:27:497 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:27:498 Consumer was closed, reconnect.
+17/06 11:28:27:679 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:27:680 Consumer was closed, reconnect.
+17/06 11:28:27:882 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:27:882 Consumer was closed, reconnect.
+17/06 11:28:28:087 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:087 Consumer was closed, reconnect.
+17/06 11:28:28:288 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:288 Consumer was closed, reconnect.
+17/06 11:28:28:476 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:477 Consumer was closed, reconnect.
+17/06 11:28:28:699 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:700 Consumer was closed, reconnect.
+17/06 11:28:28:899 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:28:900 Consumer was closed, reconnect.
+17/06 11:28:29:102 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:29:103 Consumer was closed, reconnect.
+17/06 11:28:29:306 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:29:307 Consumer was closed, reconnect.
+17/06 11:28:29:506 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:29:507 Consumer was closed, reconnect.
+17/06 11:28:29:712 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:29:712 Consumer was closed, reconnect.
+17/06 11:28:29:917 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:29:918 Consumer was closed, reconnect.
+17/06 11:28:30:118 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:30:118 Consumer was closed, reconnect.
+17/06 11:28:30:314 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:30:315 Consumer was closed, reconnect.
+17/06 11:28:30:501 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:30:502 Consumer was closed, reconnect.
+17/06 11:28:30:708 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:30:709 Consumer was closed, reconnect.
+17/06 11:28:30:925 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:30:926 Consumer was closed, reconnect.
+17/06 11:28:31:110 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:31:110 Consumer was closed, reconnect.
+17/06 11:28:31:313 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:31:314 Consumer was closed, reconnect.
+17/06 11:28:31:392 Total 0 instances are started
+17/06 11:28:31:392 Total 40 instances are added
+17/06 11:28:31:635 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:31:636 Consumer was closed, reconnect.
+17/06 11:28:31:852 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:31:853 Consumer was closed, reconnect.
+17/06 11:28:32:035 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:32:036 Consumer was closed, reconnect.
+17/06 11:28:32:237 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:32:237 Consumer was closed, reconnect.
+17/06 11:28:32:440 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:32:441 Consumer was closed, reconnect.
+17/06 11:28:32:664 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:32:664 Consumer was closed, reconnect.
+17/06 11:28:32:843 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:32:844 Consumer was closed, reconnect.
+17/06 11:28:33:045 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:33:045 Consumer was closed, reconnect.
+17/06 11:28:33:248 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:33:249 Consumer was closed, reconnect.
+17/06 11:28:33:449 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:33:449 Consumer was closed, reconnect.
+17/06 11:28:33:657 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:33:657 Consumer was closed, reconnect.
+17/06 11:28:33:861 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:33:862 Consumer was closed, reconnect.
+17/06 11:28:34:061 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:34:062 Consumer was closed, reconnect.
+17/06 11:28:34:264 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:34:265 Consumer was closed, reconnect.
+17/06 11:28:34:464 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:34:465 Consumer was closed, reconnect.
+17/06 11:28:34:681 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:34:682 Consumer was closed, reconnect.
+17/06 11:28:34:886 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:34:886 Consumer was closed, reconnect.
+17/06 11:28:35:083 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:35:084 Consumer was closed, reconnect.
+17/06 11:28:35:285 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:35:285 Consumer was closed, reconnect.
+17/06 11:28:35:493 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:35:493 Consumer was closed, reconnect.
+17/06 11:28:35:716 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:35:716 Consumer was closed, reconnect.
+17/06 11:28:35:894 com.sun.messaging.jms.JMSException: [C4003]: Error occurred on connection creation [localhost:7676]. - cause: java.net.ConnectException: Connection refused
+17/06 11:28:35:895 Consumer was closed, reconnect.

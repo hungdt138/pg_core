@@ -1,0 +1,569 @@
+/**
+ * 
+ */
+package com.crm.provisioning.impl;
+
+import java.io.IOException;
+import java.net.ConnectException;
+import java.sql.Connection;
+
+import org.apache.axis.AxisFault;
+
+import com.crm.product.cache.ProductFactory;
+import com.crm.product.cache.ProductEntry;
+import com.crm.provisioning.cache.CommandAction;
+import com.crm.provisioning.cache.ProvisioningCommand;
+import com.crm.provisioning.cache.ProvisioningConnection;
+import com.crm.provisioning.cache.ProvisioningEntry;
+import com.crm.provisioning.cache.ProvisioningFactory;
+import com.crm.provisioning.cache.ProvisioningMessage;
+import com.crm.provisioning.message.CommandMessage;
+import com.crm.provisioning.thread.CommandInstance;
+import com.crm.provisioning.util.CommandUtil;
+import com.crm.provisioning.util.ResponseUtil;
+import com.crm.subscriber.bean.SubscriberProduct;
+import com.crm.subscriber.impl.SubscriberGroupImpl;
+import com.crm.subscriber.impl.SubscriberProductImpl;
+import com.crm.util.StringUtil;
+import com.crm.kernel.index.ExecuteImpl;
+import com.crm.kernel.message.Constants;
+import com.crm.kernel.sql.Database;
+
+import com.fss.util.AppException;
+
+/**
+ * @author ThangPV
+ * 
+ */
+public class CommandImpl extends ExecuteImpl
+{
+	public ProvisioningConnection getProvisioningConnection(CommandInstance instance) throws Exception
+	{
+		return instance.getProvisioningConnection();
+	}
+
+	public String getErrorCode(CommandInstance instance, CommandMessage request, Exception error)
+	{
+		String errorCode = Constants.ERROR;
+
+		try
+		{
+			instance.logMonitor(error);
+
+			if (error != null)
+			{
+				if (error instanceof AppException)
+				{
+					errorCode = ((AppException) error).getMessage();
+				}
+				else
+				{
+					ProvisioningEntry provisioning = ProvisioningFactory.getCache().getProvisioning(request.getProvisioningId());
+
+					ProvisioningMessage message = provisioning.getMessage(error.getMessage());
+
+					if (message != null)
+					{
+						errorCode = message.getCause();
+					}
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			instance.getLog().error(e);
+		}
+
+		return errorCode;
+	}
+
+	public void processError(CommandInstance instance, CommandMessage request, Exception error) throws Exception
+	{
+		String errorCode = "";
+
+		if (error instanceof AppException)
+		{
+			errorCode = ((AppException) error).getMessage();
+		}
+		else if (error instanceof AxisFault)
+		{
+			AxisFault axisFault = (AxisFault) error;
+
+			if (axisFault.detail instanceof ConnectException)
+			{
+				errorCode = "connection-time-out";
+			}
+			else
+			{
+				errorCode = getErrorCode(instance, request, error);
+			}
+		}
+		else if (error instanceof IOException)
+		{
+			throw new AppException(Constants.ERROR_CONNECTION);
+		}
+		else
+		{
+			errorCode = getErrorCode(instance, request, error);
+		}
+
+		request.setStatus(Constants.ORDER_STATUS_DENIED);
+		request.setCause(errorCode);
+
+		CommandUtil.processError(instance, request, errorCode);
+
+	}
+
+	public CommandMessage simulation(CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		try
+		{
+			ProvisioningFactory.getCache().getProvisioning(request.getProvisioningId());
+
+			ProvisioningFactory.getCache().getCommand(request.getCommandId());
+
+			ProductFactory.getCache().getProduct(request.getProductId());
+
+			Thread.sleep(provisioningCommand.getParameters().getInteger("simulation.executeTime", 100));
+		}
+		catch (Exception e)
+		{
+			throw e;
+		}
+
+		return request;
+	}
+
+	/**
+	 * Edited by NamTA<br>
+	 * Modified Date: 16/05/2012
+	 * 
+	 * @param instance
+	 * @param provisioningCommand
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
+	public CommandMessage register(CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProduct subProduct = SubscriberProductImpl.register(
+					result.getUserId(), result.getUserName(), result.getSubscriberId(), result.getIsdn(),
+					result.getSubscriberType()
+					, result.getProductId(), result.getCampaignId(), result.getLanguageId());
+
+			/**
+			 * Add response value
+			 */
+			result.setResponseValue(ResponseUtil.SERVICE_EXPIRE_DATE,
+					StringUtil.format(subProduct.getExpirationDate(), "dd/MM/yyyy"));
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+
+	public CommandMessage unregister(CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProductImpl.unregister(
+					result.getUserId(), result.getUserName(), result.getSubProductId(), result.getProductId());
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+
+	public CommandMessage subscription(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProductImpl.subscription(
+					result.getUserId(), result.getUserName(), result.getSubProductId(), result.isFullOfCharge(),
+					result.getQuantity());
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+
+	public CommandMessage barringBySupplier(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProductImpl.barringBySupplier(result.getUserId(), result.getUserName(), result.getSubProductId());
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+
+	/**
+	 * Created by NamTA<br>
+	 * Created Date: 16/05/2012
+	 * 
+	 * @param instance
+	 * @param provisioningCommand
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
+	public CommandMessage extendExpirationDate(CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProduct subProduct = SubscriberProductImpl.extendExpirationDate(result.getUserId(),
+										result.getUserName(), result.getSubProductId(), result.getCampaignId());
+			/**
+			 * Add response value
+			 */
+			result.setResponseValue(ResponseUtil.SERVICE_EXPIRE_DATE,
+					StringUtil.format(subProduct.getExpirationDate(), "dd/MM/yyyy"));
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+	
+	public CommandMessage unbarringBySupplier(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			if (!product.isSubscription())
+			{
+				throw new AppException(Constants.ERROR_INVALID_REQUEST);
+			}
+
+			SubscriberProductImpl.unbarringBySupplier(result.getUserId(), result.getUserName(),
+					result.getSubProductId());
+		}
+		catch (Exception error)
+		{
+			processError(instance, request, error);
+		}
+
+		return result;
+	}
+
+	public CommandMessage addMember(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		Connection connection = null;
+
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			connection = Database.getConnection();
+
+			connection.setAutoCommit(false);
+
+			// add member into group
+			String verifyCode = result.getParameters().getString("member.verifyCode", "");
+
+			SubscriberGroupImpl.addMember(
+					connection, result.getUserId(), result.getUserName()
+					, result.getIsdn(), result.getShipTo(), result.getProductId(), product.getMemberType()
+					, verifyCode, result.getOrderDate(), Constants.ORDER_STATUS_APPROVED);
+
+			if (product.isSubscription())
+			{
+				int totalMember = SubscriberGroupImpl.countMember(
+						connection, result.getIsdn(), result.getProductId(), product.getMemberType());
+
+				if (totalMember == 1 && request.getProductId() != 12110)
+				{
+					SubscriberProductImpl.register(
+							connection, result.getUserId(), result.getUserName()
+							, result.getSubscriberId(), result.getIsdn(), result.getSubscriberType(), result.getProductId()
+							, result.getCampaignId(), result.getLanguageId());
+				}
+			}
+
+			connection.commit();
+		}
+		catch (Exception error)
+		{
+			Database.rollback(connection);
+
+			processError(instance, request, error);
+		}
+		finally
+		{
+			Database.closeObject(connection);
+		}
+
+		return result;
+	}
+
+	public CommandMessage addMemberF5(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		Connection connection = null;
+
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			connection = Database.getConnection();
+
+			connection.setAutoCommit(false);
+
+			// add member into group
+			String verifyCode = result.getParameters().getString("member.verifyCode", "");
+			String[] phoneBookList = result.getParameters().getString("f5-new-member", "").split(",");
+
+			for (int i = 0; i < phoneBookList.length; i++)
+			{
+				SubscriberGroupImpl.addMember(
+						connection, result.getUserId(), result.getUserName()
+						, result.getIsdn(), phoneBookList[i], result.getProductId(), product.getMemberType()
+						, verifyCode, result.getOrderDate(), Constants.ORDER_STATUS_APPROVED);
+			}
+			connection.commit();
+		}
+		catch (Exception error)
+		{
+			Database.rollback(connection);
+
+			processError(instance, request, error);
+		}
+		finally
+		{
+			Database.closeObject(connection);
+		}
+
+		return result;
+	}
+
+	public CommandMessage removeMember(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		Connection connection = null;
+
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			connection = Database.getConnection();
+
+			connection.setAutoCommit(false);
+
+			// add member into group
+			SubscriberGroupImpl.removeMember(connection
+					, result.getIsdn(), result.getShipTo(), result.getProductId(), product.getMemberType());
+
+			if (product.isSubscription())
+			{
+				int totalMember = SubscriberGroupImpl.countMember(
+						connection, result.getIsdn(), result.getProductId(), product.getMemberType());
+
+				if (totalMember == 0)
+				{
+					SubscriberProductImpl.unregister(
+							connection, result.getUserId(), result.getUserName(), result.getSubProductId(),
+							result.getProductId());
+				}
+			}
+
+			connection.commit();
+		}
+		catch (Exception error)
+		{
+			Database.rollback(connection);
+
+			processError(instance, request, error);
+		}
+		finally
+		{
+			Database.closeObject(connection);
+		}
+
+		return result;
+	}
+
+	public CommandMessage removeMemberF5(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		Connection connection = null;
+
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			connection = Database.getConnection();
+
+			connection.setAutoCommit(false);
+
+			// add member into group
+			String[] phoneBookList = result.getParameters().getString("f5-remove-member", "").split(",");
+
+			for (int i = 0; i < phoneBookList.length; i++)
+			{
+				SubscriberGroupImpl.removeMember(connection
+						, result.getIsdn(), phoneBookList[i], result.getProductId(), product.getMemberType());
+			}
+
+			connection.commit();
+		}
+		catch (Exception error)
+		{
+			Database.rollback(connection);
+
+			processError(instance, request, error);
+		}
+		finally
+		{
+			Database.closeObject(connection);
+		}
+
+		return result;
+	}
+
+	public CommandMessage removeGroup(
+			CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		Connection connection = null;
+
+		CommandMessage result = request;
+
+		try
+		{
+			ProductEntry product = ProductFactory.getCache().getProduct(request.getProductId());
+
+			connection = Database.getConnection();
+
+			connection.setAutoCommit(false);
+
+			// add member into group
+			SubscriberGroupImpl.removeGroup(connection, result.getIsdn(), result.getProductId(), product.getMemberType());
+
+			if (product.isSubscription())
+			{
+				SubscriberProductImpl.unregister(
+						connection, result.getUserId(), result.getUserName(), result.getSubProductId(), result.getProductId());
+			}
+
+			connection.commit();
+		}
+		catch (Exception error)
+		{
+			Database.rollback(connection);
+
+			processError(instance, request, error);
+		}
+		finally
+		{
+			Database.closeObject(connection);
+		}
+
+		return result;
+	}
+
+	public CommandMessage rollback(CommandInstance instance, ProvisioningCommand provisioningCommand, CommandMessage request)
+			throws Exception
+	{
+		return null;
+	}
+
+	public CommandMessage nextCommand(CommandAction action, CommandMessage message) throws Exception
+	{
+		CommandMessage transform = ((CommandMessage) message).clone();
+
+		transform.setCommandId(action.getNextCommandId());
+
+		// transform.setCommandRequest(transform.getCommandResponse());
+		transform.setResponse("");
+
+		return transform;
+	}
+}
